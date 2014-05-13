@@ -3,7 +3,7 @@ HMSegmentedControl
 
 Add bottom line and divider line for  HMSegmentControl
 
-![HMSegmentedControl](https://github.com/zhongyang/HMSegmentControl_Line/blob/master/demo.png)
+![HMSegmentedControl](https://raw.github.com/zhongyang/HMSegmentControl_Line/master/demo.png)
 
 # License
 
