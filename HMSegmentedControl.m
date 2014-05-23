@@ -179,15 +179,16 @@ typedef enum {
             CGFloat lineWidth = self.segmentWidth;
             lineWidth += (idx == 0 ? 100.0f:0.0f);
             lineWidth += (idx == (self.sectionTitles.count -1) ? 100.0f:0.0f);
+            CGFloat linePixel = 0.5f;
 
-            CGRect bgLineFrme = CGRectMake(lineLeftPos, self.bounds.size.height-1.0f, lineWidth, 1.0);
+            CGRect bgLineFrme = CGRectMake(lineLeftPos, self.bounds.size.height-linePixel, lineWidth, linePixel);
             bgLineLayer.frame = bgLineFrme;
             bgLineLayer.backgroundColor = [UIColor lightGrayColor].CGColor;
             [self.scrollView.layer addSublayer:bgLineLayer];
 
             if (idx != 0) {
               CALayer *spLineLayer = [CALayer layer];
-              CGRect spLineFrme = CGRectMake(self.segmentWidth*idx, 0, 1.0f, self.bounds.size.height);
+              CGRect spLineFrme = CGRectMake(self.segmentWidth*idx, 0, linePixel, self.bounds.size.height);
               spLineLayer.frame = spLineFrme;
               spLineLayer.backgroundColor = [UIColor lightGrayColor].CGColor;
               [self.scrollView.layer addSublayer:spLineLayer];
