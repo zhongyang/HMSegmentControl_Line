@@ -252,12 +252,16 @@ typedef enum {
     CGFloat sectionWidth = 0.0f;
 
     if (self.type == HMSegmentedControlTypeText) {
+      if (self.selectedSegmentIndex < self.sectionTitles.count) {
         CGFloat stringWidth = [[self.sectionTitles objectAtIndex:self.selectedSegmentIndex] sizeWithFont:self.font].width;
         sectionWidth = stringWidth;
+      }
     } else if (self.type == HMSegmentedControlTypeImages) {
+      if (self.selectedSegmentIndex < self.sectionTitles.count) {
         UIImage *sectionImage = [self.sectionImages objectAtIndex:self.selectedSegmentIndex];
         CGFloat imageWidth = sectionImage.size.width;
         sectionWidth = imageWidth;
+      }
     }
     
     if (self.selectionStyle == HMSegmentedControlSelectionStyleTextWidthStripe && sectionWidth <= self.segmentWidth) {
