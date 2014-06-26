@@ -30,6 +30,7 @@ enum {
 @property (nonatomic, strong) NSArray *sectionTitles;
 @property (nonatomic, strong) NSArray *sectionImages;
 @property (nonatomic, strong) NSArray *sectionSelectedImages;
+@property (nonatomic, assign) CGFloat verticalSeparatorOffset;
 
 /*
  Provide a block to be executed when selected index is changed.

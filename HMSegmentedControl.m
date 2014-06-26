@@ -132,6 +132,7 @@ typedef enum {
     self.selectionIndicatorBoxLayer = [CALayer layer];
     self.selectionIndicatorBoxLayer.opacity = 0.2;
     self.selectionIndicatorBoxLayer.borderWidth = 1.0f;
+    self.verticalSeparatorOffset = 0.0f;
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -188,7 +189,7 @@ typedef enum {
 
             if (idx != 0) {
               CALayer *spLineLayer = [CALayer layer];
-              CGRect spLineFrme = CGRectMake(self.segmentWidth*idx, 0, linePixel, self.bounds.size.height);
+              CGRect spLineFrme = CGRectMake(self.segmentWidth*idx, self.verticalSeparatorOffset, linePixel, self.bounds.size.height - 2 * self.verticalSeparatorOffset);
               spLineLayer.frame = spLineFrme;
               spLineLayer.backgroundColor = [UIColor lightGrayColor].CGColor;
               [self.scrollView.layer addSublayer:spLineLayer];
