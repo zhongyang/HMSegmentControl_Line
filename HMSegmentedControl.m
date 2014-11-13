@@ -77,7 +77,7 @@ typedef enum {
 }
 
 - (id)initWithSectionTitles:(NSArray *)sectiontitles {
-    self = [self initWithFrame:CGRectZero];
+    self = [super initWithFrame:CGRectZero];
     
     if (self) {
         [self commonInit];
